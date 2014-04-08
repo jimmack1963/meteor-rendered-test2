@@ -3,6 +3,13 @@ meteor-rendered-test2
 
 Further explaining my problems and lack of understanding of Meteor 0.8.0 Template.rendered function. There doesn't seem to be a callback for when data is finally loaded into a template. This repo is just trying to simplify my problem and find a solution. 
 
+It does look like there is some attention to this problem there is now an issue logged on the main Meteor repo (https://github.com/meteor/meteor/issues/2010). Also, I have seen several Meteor Google Groups and Stack Overflow threads about this issue.
+
+* [[0.8.0] How to update DOM after every data change without rendered event?](https://groups.google.com/forum/#!topic/meteor-talk/w9oxqdUs-pA)
+* [Issue with meteor rendered callback](https://groups.google.com/forum/#!topic/meteor-talk/nol-6nDxUJg)
+* [rendered called before DOM completion - meteor blaze](https://groups.google.com/forum/#!topic/meteor-talk/47Orrrz7kjg)
+* [How do I use X-editable on dynamic fields in a Meteor template now with Blaze?](http://stackoverflow.com/questions/22867690/how-do-i-use-x-editable-on-dynamic-fields-in-a-meteor-template-now-with-blaze)
+
 #### Using Template._TemplateName_.rendered inside an {{#each}} block
 The following seems to work according to the new Blaze documentation and the porting examples given here: https://github.com/meteor/meteor/wiki/Using-Blaze#rendered-callback-only-fires-once
 
@@ -93,7 +100,7 @@ Template.clientDetails.rendered = function() {
 
 The following show the only way I was able to reliable use the {{title}} variable. By using a setTimeout there is enough time for the data to be loaded into the template. This seems like a really unfortunate method for ensuring data is loaded into a template.
 
-**/client/views/client_page_mpex.html
+**/client/views/client_page_mpex.html**
 ```
 <template name="clientPageEx">
 	<h1>{{title}}</h1>
