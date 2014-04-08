@@ -8,9 +8,24 @@
 		{{/each}}
 	</ul>
 
+	<hr>
+
+	<h1>Clients List Ex</h1>
+	
+	<ul>
+		{{#each clients}}
+			{{> clientItemEx}}
+		{{/each}}
+	</ul>
+
 </template>
 
 
 <template name="clientItem">
 	<li><a href="{{pathFor 'clientPage'}}">{{title}}</a></li>
+</template>
+
+
+<template name="clientItemEx">
+	<li><a href="{{pathFor 'clientPageEx'}}">{{title}}</a></li>
 </template>
