@@ -1,7 +1,7 @@
 meteor-rendered-test2
 =====================
 
-Further explaining my problems and lack of understanding of Meteor 0.8.0 Template.rendered function. There doesn't seem to be a callback for when data is finally loaded into a template. This repo is just trying to simplify my problem and find a solution. 
+Further explaining my problems and lack of understanding of Meteor 0.8.0 Template.rendered function. There doesn't seem to be a callback for when data is finally loaded into a template. This repo is just trying to simplify my problem and find a solution. Please feel free to let me know if I am doing something stupid or not using "best practices" in any way as I am still pretty new to application development and Meteor development.
 
 It does look like there is some attention to this problem there is now an issue logged on the main Meteor repo (https://github.com/meteor/meteor/issues/2010). Also, I have seen several Meteor Google Groups and Stack Overflow threads about this issue.
 
@@ -9,6 +9,9 @@ It does look like there is some attention to this problem there is now an issue 
 * [Issue with meteor rendered callback](https://groups.google.com/forum/#!topic/meteor-talk/nol-6nDxUJg)
 * [rendered called before DOM completion - meteor blaze](https://groups.google.com/forum/#!topic/meteor-talk/47Orrrz7kjg)
 * [How do I use X-editable on dynamic fields in a Meteor template now with Blaze?](http://stackoverflow.com/questions/22867690/how-do-i-use-x-editable-on-dynamic-fields-in-a-meteor-template-now-with-blaze)
+
+
+### Examples and Explanations
 
 #### Using Template._TemplateName_.rendered inside an {{#each}} block
 The following seems to work according to the new Blaze documentation and the porting examples given here: https://github.com/meteor/meteor/wiki/Using-Blaze#rendered-callback-only-fires-once
