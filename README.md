@@ -3,8 +3,9 @@ meteor-rendered-test2
 
 Further explaining my problems and lack of understanding of Meteor 0.8.0 Template.rendered function. There doesn't seem to be a callback for when data is finally loaded into a template. This repo is just trying to simplify my problem and find a solution. Please feel free to let me know if I am doing something stupid or not using "best practices" in any way as I am still pretty new to application development and Meteor development.
 
-It does look like there is some attention to this problem there is now a couple issues logged on the main Meteor repo [#2010](https://github.com/meteor/meteor/issues/2010) and [#2001](https://github.com/meteor/meteor/issues/2001) a. Also, I have seen several Meteor Google Groups and Stack Overflow threads about this issue.
+It does look like there is some attention to this problem there is now a couple issues logged on the main Meteor repo [#2010](https://github.com/meteor/meteor/issues/2010) and [#2001](https://github.com/meteor/meteor/issues/2001). 
 
+Also, I have seen several Meteor Google Groups and Stack Overflow threads about this issue.
 * [[0.8.0] How to update DOM after every data change without rendered event?](https://groups.google.com/forum/#!topic/meteor-talk/w9oxqdUs-pA)
 * [Issue with meteor rendered callback](https://groups.google.com/forum/#!topic/meteor-talk/nol-6nDxUJg)
 * [rendered called before DOM completion - meteor blaze](https://groups.google.com/forum/#!topic/meteor-talk/47Orrrz7kjg)
