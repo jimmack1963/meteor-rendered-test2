@@ -118,25 +118,38 @@ The following show the only way I was able to reliable use the {{title}} variabl
 
 **/client/views/client_page_mpex.js**
 ```
-// this will output the correct {{title}} variable on the 
-// first load from the previous page 
-// however if you refresh the single client page
-// the {{title}} variable will not work
-Template.clientPage.rendered = function() {
-	// {{title}} is never loaded before rendered is called
-	console.log("clientPage H1: " + this.$("h1").text());
+// Below is the only way I seem to be able to make
+// sure that the {{title}} variables are in place 
+// to run jquery on the data
 
-	// {{title}} is never loaded before rendered is called
-	console.log("clientPage H2: " + this.$("h2").text());
+// Note that it is just as efficient to use one
+// template rather than embed an additional template
+
+Template.clientPageEx.rendered = function() {
+	console.log("clientpageEx rendered =  \"" + this.$("h1").text() + "\"" );
+
+	Meteor.setTimeout(function() {
+		console.log("clientpageEx #2 rendered");
+		console.log("clientpageEx #2 copy = \"" + this.$("h1").text() + "\"" );
+	}, 300);
+
 }
 
-// the output for the {{title}} variable for this will never
-// work either
-// One interesting note is that this rendered callback fires
-// before it's parent "clientPage"
-Template.clientDetails.rendered = function() {
-	console.log("clientDetails " + this.$(".details").text());
+Template.clientDetailsEx.rendered = function() {
+	console.log("clientDetailsEx rendered");
+	console.log("clientDetailsEx copy = \"" + this.$(".details").text() + "\"" );
+
+	Meteor.setTimeout(function() {
+		console.log("clientDetailsEx #2 rendered");
+		console.log("clientDetailsEx #2 copy = \"" + this.$(".details").text() + "\"" );
+	}, 300);
+
 }
+
+Template.clientPageEx.destroyed = function() {
+	delete(Template.clientDetailsEx.rendered);
+}
+
 ```
 
 
