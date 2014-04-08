@@ -1,0 +1,16 @@
+<template name="clientsList">
+	
+	<h1>Clients List</h1>
+	
+	<ul>
+		{{#each clients}}
+			{{> clientItem}}
+		{{/each}}
+	</ul>
+
+</template>
+
+
+<template name="clientItem">
+	<li><a href="{{pathFor 'clientPage'}}">{{title}}</a></li>
+</template>

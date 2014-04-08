@@ -1,0 +1,9 @@
+<template name="clientPage">
+	<h1>{{title}}</h1>
+	<h2>{{> clientDetails}}</h2>
+	<p><a href="{{pathFor 'clientsList'}}">back to client list</a></p>
+</template>
+
+<template name="clientDetails">
+	<span class="details">details: {{title}}</span>
+</template>
